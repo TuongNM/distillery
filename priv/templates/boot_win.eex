@@ -369,7 +369,8 @@ start "" /B "%erl%" -noshell -noinput +Bd ^
        -args_file "%vm_args%" ^
        -config "%sys_config%" ^
        %erl_opts% ^
-       -extra %extra_opts%
+       -extra %extra_opts% ^
+       -- %*
 call :set_pid
 call :post_start_hooks
 
